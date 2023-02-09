@@ -6,7 +6,7 @@ module.exports = function Layout({ children }) {
       <head>
         <title>FlashCard</title>
         <link rel="stylesheet" href="..." />
-        {/* <script src="script.js" /> */}
+        <script defer src="/js/application.js" />
       </head>
       <body>{children}</body>
     </html>

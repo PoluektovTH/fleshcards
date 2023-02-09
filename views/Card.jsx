@@ -1,11 +1,11 @@
 const React = require('react');
 
-function Card() {
+function Card({ question, answer }) {
   return (
     <div className="card">
       <p>Название темы</p>
-      <p>Вопрос</p>
-      <a>ответ</a>
+      <p>{question}</p>
+      <p>{answer}</p>
     </div>
   );
 }
