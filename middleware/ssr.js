@@ -18,7 +18,10 @@ function renderComponent(
   const document = `<!DOCTYPE html>${html}`;
   this.send(document);
 }
-module.exports = function ssr(req, res, next) {
-  res.renderComponent = renderComponent; //>>>>res.renderComponent возвращает HTML код на основе renderComponent
+
+function ssr(req, res, next) {
+  res.renderComponent = renderComponent;
   next();
-};
+}
+
+module.exports = ssr;
