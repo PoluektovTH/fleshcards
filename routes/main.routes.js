@@ -1,7 +1,9 @@
 const router = require('express').Router();
-//TODO редирект на слеш при нажатии на home
-router.route('/').get((req, res) => {
-  res.send('   ');
+const Home = require('../views/Home');
+
+router.route('/').get(async (req, res) => {
+  res.renderComponent(Home)
+  //тут отрисовка Deсks
 });
 
 module.exports = router;
