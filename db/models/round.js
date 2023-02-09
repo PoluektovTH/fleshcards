@@ -1,25 +1,40 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Round extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+    static associate({ User, Deck }) {
+      Round.belongsTo(User, { foreignKey: 'user_id' });
+      Round.belongsTo(Deck, { foreignKey: 'deck_id' });
     }
   }
-  Round.init({
-    user_id: DataTypes.INTEGER,
-    deck_id: DataTypes.INTEGER,
-    count_of_right_answers: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Round',
-  });
+  Round.init(
+    {
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Users',
+          key: 'id',
+        },
+      },
+      deck_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Decks',
+          key: 'id',
+        },
+      },
+      count_of_right_answers: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+    },
+    {
+      sequelize,
+      modelName: 'Round',
+    }
+  );
   return Round;
 };

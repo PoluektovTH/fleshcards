@@ -1,24 +1,32 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Deck extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+    static associate({ Card, Round }) {
+      Deck.hasMany(Card, {
+        foreignKey: 'deck_id',
+      });
+      Deck.hasMany(Round, {
+        foreignKey: 'deck_id',
+      });
     }
   }
-  Deck.init({
-    theme: DataTypes.TEXT,
-    count_of_cards: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Deck',
-  });
+  Deck.init(
+    {
+      theme: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      count_of_cards: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+    },
+    {
+      sequelize,
+      modelName: 'Deck',
+    }
+  );
   return Deck;
 };
