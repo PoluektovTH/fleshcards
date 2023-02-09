@@ -7,14 +7,25 @@ const Card = require('./Card');
 function Home() {
   return (
     <Layout>
-      <div className="header">
-        <div>Flash Cards</div>
-        <div className="navBar">
-          <a className="login">Login</a>
-          <a className="redirectBtn">Home</a>
-        </div>
-      </div>
-      <div>
+      <nav
+        className="navbar bg-primary px-5"
+        data-bs-theme="dark"
+        style={{ height: '10vh', fontSize: '24px' }}
+      >
+        <span>Flash Cards</span>
+        <span>
+          <a className="login px-2">Login</a>
+          <a className="redirectBtn px-2">Home</a>
+        </span>
+      </nav>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+        }}
+      >
         <Decks />
       </div>
     </Layout>
