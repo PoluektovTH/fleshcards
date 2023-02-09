@@ -12,6 +12,7 @@ config(app);
 
 app.use('/', mainRouter)
 app.use('/card', cardRouter)
+app.use('/card/:id', cardRouter)
 
 app.listen(PORT, () => {
     console.log(`Server started at ${PORT} port`);

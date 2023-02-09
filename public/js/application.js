@@ -7,13 +7,14 @@ redirectBtn.addEventListener('click', async (event) => {
 });
 
 deckBtn.addEventListener('click', async (event) => {
-  const target = event.target;
-  console.log(target.innerText);
-  window.location.href = `http://localhost:3000/${target.innerText}`;
-  //   const response = await fetch(
-  //     `/${target.innerText}`
-  //     //тут темы заменяются на вопрос
-  //   );
-  //   const inp = await response.text();
-  //   console.log(inp);
+  const target = event.target.getAttribute('id');
+  
+  console.log(target);
+  window.location.href = `http://localhost:3000/card/${target}`;
+  // const response = await fetch(
+  //   `/card/${target}`
+  //   //тут темы заменяются на вопрос
+  // );
+  // const inp = await response.text();
+  // console.log(inp);
 });

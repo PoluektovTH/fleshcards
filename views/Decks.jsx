@@ -1,12 +1,36 @@
 const React = require('react');
+const Home = require('./Home');
 
 function Decks() {
   return (
-    <div className="deckBtn">
-      <button id="1">Deck1</button>
-      <button id="2">deck2</button>
-      <button id="3">deck3</button>
-    </div>
+    <Home>
+      <div className="deckBtn">
+        <button
+          type="button"
+          className="btn btn-info ms-5"
+          id="1"
+          style={{ height: '50vh', width: '30vh', fontSize: '30px' }}
+        >
+          Decks1
+        </button>
+        <button
+          type="button"
+          id="2"
+          className="btn btn-info ms-5"
+          style={{ height: '50vh', width: '30vh', fontSize: '30px' }}
+        >
+          Decks2
+        </button>
+        <button
+          type="button"
+          id="3"
+          className="btn btn-info ms-5"
+          style={{ height: '50vh', width: '30vh', fontSize: '30px' }}
+        >
+          Decks3
+        </button>
+      </div>
+    </Home>
   );
 }
 
