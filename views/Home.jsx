@@ -1,11 +1,24 @@
+const { Button } = require('bootstrap')
 const React=require('react')
+const Decks = require('./Decks')
 const Layout=require('./Layout')
+const Decks=require('./Decks')
+const Card=require('./Card')
 
 
-function Home({}){
+function Home(){
     return(
-        <Layout title={title}>
-      
+        <Layout >
+      <div className='header'>
+        <div>Flash Cards</div>
+        <div className='navBar'>
+            <a className='login'>Login</a>
+            <a className='redirectBtn'>Home</a>
+        </div>
+      </div>
+<div>
+<Decks/>
+</div>
         </Layout>
         
     )
