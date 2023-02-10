@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const Home = require('../views/Home');
+const Decks = require('../views/Decks');
 
 router.route('/').get(async (req, res) => {
-  res.renderComponent(Home)
-  //тут отрисовка Deсks
+  res.renderComponent(Decks);
+  //тут отрисовка главной страницы
 });
 
 module.exports = router;
