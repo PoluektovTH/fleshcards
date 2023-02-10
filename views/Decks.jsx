@@ -9,7 +9,12 @@ function Decks() {
           type="button"
           className="btn btn-info ms-5"
           id="1"
-          style={{ height: '50vh', width: '30vh', fontSize: '30px' }}
+          style={{
+            height: '30vh',
+            width: '30vh',
+            fontSize: '30px',
+            borderRadius: '15%',
+          }}
         >
           Decks1
         </button>
@@ -17,7 +22,12 @@ function Decks() {
           type="button"
           id="2"
           className="btn btn-info ms-5"
-          style={{ height: '50vh', width: '30vh', fontSize: '30px' }}
+          style={{
+            height: '30vh',
+            width: '30vh',
+            fontSize: '30px',
+            borderRadius: '15%',
+          }}
         >
           Decks2
         </button>
@@ -25,7 +35,12 @@ function Decks() {
           type="button"
           id="3"
           className="btn btn-info ms-5"
-          style={{ height: '50vh', width: '30vh', fontSize: '30px' }}
+          style={{
+            height: '30vh',
+            width: '30vh',
+            fontSize: '30px',
+            borderRadius: '15%',
+          }}
         >
           Decks3
         </button>
