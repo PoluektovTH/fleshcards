@@ -8,5 +8,4 @@ const config = (app) => {
   app.use(express.static(path.join(__dirname, '..', 'public')));
   app.use(ssr);
 };
-
 module.exports = config;
