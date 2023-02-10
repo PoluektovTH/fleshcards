@@ -4,7 +4,16 @@ const Home = require('./Home');
 function Decks({ themes }) {
   return (
     <Home>
-      <div className="deckBtn">
+      <div
+        className="deckBtn"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          height: '90vh',
+          width: '100vw',
+        }}
+      >
         <button
           type="button"
           className="btn btn-info ms-5"
@@ -12,8 +21,9 @@ function Decks({ themes }) {
           style={{
             height: '30vh',
             width: '30vh',
-            fontSize: '30px',
+            fontSize: '42px',
             borderRadius: '15%',
+            // transform: 'scale(1.2)',
           }}
         >
           {themes[0]}
@@ -25,8 +35,9 @@ function Decks({ themes }) {
           style={{
             height: '30vh',
             width: '30vh',
-            fontSize: '30px',
+            fontSize: '42px',
             borderRadius: '15%',
+            // transform: 'scale(1.2)',
           }}
         >
           {themes[1]}
@@ -38,8 +49,9 @@ function Decks({ themes }) {
           style={{
             height: '30vh',
             width: '30vh',
-            fontSize: '30px',
+            fontSize: '42px',
             borderRadius: '15%',
+            // transform: 'scale(1.2)',
           }}
         >
           {themes[2]}

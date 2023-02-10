@@ -1,0 +1,16 @@
+.btn-info {
+  transition: 0.5s;
+}
+.btn-info:hover {
+  transform: scale(1.4) !important;
+  background: linear-gradient(120deg, darkmagenta, crimson, orange);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.5s;
+  border: 0;
+  padding: 20px 30px;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
