@@ -10,10 +10,9 @@ const PORT = process.env.PORT ?? 3000;
 
 config(app);
 
-app.use('/', mainRouter)
-app.use('/card', cardRouter)
-app.use('/card/:id', cardRouter)
+app.use('/', mainRouter);
+app.use('/card', cardRouter);
 
 app.listen(PORT, () => {
-    console.log(`Server started at ${PORT} port`);
-  });
+  console.log(`Server started at ${PORT} port`);
+});
