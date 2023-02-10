@@ -16,14 +16,6 @@ router.route('/:id/:quest').get(async (req, res) => {
   const { question, answer } = await Card.findOne({
     where: { id: quest, deck_id: id },
   });
-  console.log(req.params);
-  console.log(question);
-  // await res.text('123');
-  // здесь отрисовывается вопрос по выбранной теме
-  // const cardId = card.id;
-  // const cardQuest = card.question;
-  // const cardAnsw = card.answer;
-  // res.renderComponent(CardView, { question }, { doctype: false });
   res.send(question);
 });
 
