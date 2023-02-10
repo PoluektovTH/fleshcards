@@ -49,4 +49,5 @@ form.addEventListener('submit', async (event) => {
   const data = await answ.text();
   div.innerHTML = data;
   console.log(data);
+  input.value = '';
 });

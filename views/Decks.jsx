@@ -1,7 +1,7 @@
 const React = require('react');
 const Home = require('./Home');
 
-function Decks() {
+function Decks({ themes }) {
   return (
     <Home>
       <div className="deckBtn">
@@ -16,7 +16,7 @@ function Decks() {
             borderRadius: '15%',
           }}
         >
-          Decks1
+          {themes[0]}
         </button>
         <button
           type="button"
@@ -29,7 +29,7 @@ function Decks() {
             borderRadius: '15%',
           }}
         >
-          Decks2
+          {themes[1]}
         </button>
         <button
           type="button"
@@ -42,7 +42,7 @@ function Decks() {
             borderRadius: '15%',
           }}
         >
-          Decks3
+          {themes[2]}
         </button>
       </div>
     </Home>
