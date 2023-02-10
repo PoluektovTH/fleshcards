@@ -4,7 +4,13 @@ const Home = require('./Home');
 function CardView({ theme, question, answer, id1 }) {
   return (
     <Home>
-      <div className="card" style={{ fontSize: '24px' }}>
+      <div
+        className="card"
+        style={{
+          fontSize: '24px',
+          transform: 'scale(2)',
+        }}
+      >
         <div className="card-body m-3">
           <h5 className="card-title">{theme}</h5>
           <p className="card-text">{question}</p>

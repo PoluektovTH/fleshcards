@@ -8,7 +8,7 @@ function Home({ children }) {
       <nav
         className="navbar bg-primary px-5"
         data-bs-theme="dark"
-        style={{ height: '10vh', fontSize: '24px' }}
+        style={{ height: '10vh', fontSize: '42px' }}
       >
         <span>Flash Cards</span>
         <span>
@@ -19,9 +19,10 @@ function Home({ children }) {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'space-around',
           alignItems: 'center',
-          height: '100vh',
+          height: '90vh',
+          width: '100vw',
         }}
       >
         {children}
