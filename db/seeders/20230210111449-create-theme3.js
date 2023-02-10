@@ -4,7 +4,7 @@ const { Deck } = require('../models');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await Deck.bulkCreate([{ theme: 'Яблоки', count_of_cards: 5 }]);
+    await Deck.bulkCreate([{ theme: 'Эльбрус', count_of_cards: 5 }]);
   },
 
   async down(queryInterface, Sequelize) {
