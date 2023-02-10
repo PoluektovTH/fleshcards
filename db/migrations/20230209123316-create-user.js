@@ -10,6 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+        unique: true,
+      },
+      password: {
         type: Sequelize.TEXT,
         allowNull: false,
       },
